@@ -39,7 +39,7 @@ module.exports = {
             return res.json({error: 'descrição deve ter 10 (dez) ou mais caracteres.'});
         else {
             if (req.body.price <= 0)
-                return res.json({error: 'preço deve ser maior ou igual a 0 (zero).'});
+                return res.json({error: 'preço deve ser maior que 0 (zero).'});
             else {
                 products.items.push(req.body);
                 res.json(products.items); 
